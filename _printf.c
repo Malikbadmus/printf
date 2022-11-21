@@ -33,7 +33,8 @@ int _printf(const char *format, ...)
       if (format[i] == '%')
       {
 
-            printf("i have encountered a %\n");
+            printf("i have encountered a percentage\n");
+            break;
       }
 
   }
