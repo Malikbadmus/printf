@@ -10,5 +10,5 @@
 
 int main(void)
 {
-	_printf("string")
+	_printf("string");
 }
