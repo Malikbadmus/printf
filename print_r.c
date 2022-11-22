@@ -39,25 +39,29 @@ int print_bigS(va_list l, flags_t *f)
 
 /**
  * print_rev - prints a string in reverse
- * @l: argument from _printf
+ * @vl: argument from _printf
  * @f: pointer to the struct flags that determines
  * if a flag is passed to _printf
  * Return: length of the printed string
  */
-int print_rev(va_list l, flags_t *f)
+int print_rev(va_list vl, flags_t *f)
 {
 	int i = 0, j;
-	char *s = va_arg(l, char *);
+	char *s = va_arg(vl, char *);
 
 	(void)f;
-	if (!s)
-		s = "(null)";
+	if (s == NULL)
+	{
+		s = ")Null(";
+	}
+	for (j = 0; s[j]; j++)
+		;
 
-	while (s[i])
-		i++;
-
-	for (j = i - 1; j >= 0; j--)
+	for (j = j - 1; j >= 0; j--)
+	{
 		_putchar(s[j]);
+		i++;
+	}
 
 	return (i);
 }
