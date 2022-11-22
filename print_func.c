@@ -13,6 +13,7 @@ int (*print_func(char b))(va_list)
 		{"%", print_percent},
 		{"d", print_d},
 		{"i", print_i},
+		{"r", print_reverse},
 		{NULL, NULL}
 	};
 	while (arr[i].correct)
