@@ -76,7 +76,7 @@ int print_d(va_list vl)
 	while (all > 9)
 	{
 		all /= 10;
-		num += 10;
+		num *= 10;
 	}
 	while (num >= 1)
 	{
