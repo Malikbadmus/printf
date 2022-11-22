@@ -80,7 +80,7 @@ int print_d(va_list vl)
 	}
 	while (num >= 1)
 	{
-		count += _putchar(((all / num) % 10) + '0');
+		count += _putchar(((total / num) % 10) + '0');
 		num /= 10;
 	}
 	return (count);
