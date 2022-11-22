@@ -94,3 +94,8 @@ int print_i(va_list vl)
 {
 	return (print_d(vl));
 }
+/**
+  * print_reverse - prints reverse
+  * @vl: argument
+  * Return: number of chars
+  */
