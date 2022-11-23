@@ -1,4 +1,5 @@
 #include "main.h"
+#include "printf.h"
 
 /**
  * print_bigS - Non printable characters
@@ -40,16 +41,16 @@ int print_bigS(va_list l, flags_t *f)
 /**
  * print_rev - prints a string in reverse
  * @vl: argument from _printf
- * @f: pointer to the struct flags that determines
  * if a flag is passed to _printf
  * Return: length of the printed string
  */
-int print_rev(va_list vl, flags_t *f)
+int print_rev(va_list vl)
 {
 	int i = 0, j;
-	char *s = va_arg(vl, char *);
+	char *s;
 
-	(void)f;
+	s = va_arg(vl, char *);
+
 	if (s == NULL)
 	{
 		s = ")Null(";
@@ -59,7 +60,9 @@ int print_rev(va_list vl, flags_t *f)
 
 	for (j = j - 1; j >= 0; j--)
 	{
-		_putchar(s[j]);
+		char x = s[j];
+
+		_putchar(x);
 		i++;
 	}
 
@@ -96,17 +99,4 @@ int print_rot13(va_list l, flags_t *f)
 	}
 
 	return (j);
-}
-
-/**
- * print_percent - prints a percent
- * @l: va_list arguments from _printf
- * @f: pointer to the struct flags in which we turn the flags on
- * Return: number of char printed
- */
-int print_percent(va_list l, flags_t *f)
-{
-	(void)l;
-	(void)f;
-	return (_putchar('%'));
 }

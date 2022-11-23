@@ -22,7 +22,7 @@ int print_s(va_list vl);
 int print_percent(va_list vl);
 int print_d(va_list vl);
 int print_i(va_list vl);
-int print_reverse(va_list vl);
+int print_rev(va_list vl);
 
 
 #endif
