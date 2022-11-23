@@ -53,16 +53,14 @@ int print_rev(va_list vl)
 
 	if (s == NULL)
 	{
-		s = ")Null(";
+		s = ")llun(";
 	}
-	for (j = 0; s[j]; j++)
+	for (j = 0; s[j] != '\0'; j++)
 		;
 
 	for (j = j - 1; j >= 0; j--)
 	{
-		char x = s[j];
-
-		_putchar(x);
+		_putchar(s[j]);
 		i++;
 	}
 

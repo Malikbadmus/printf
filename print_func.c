@@ -14,6 +14,12 @@ int (*print_func(char b))(va_list)
 		{"d", print_d},
 		{"i", print_i},
 		{"r", print_rev},
+		{"b", print_bin},
+		{"u", print_unsig},
+		{"o", print_octal},
+		{"x", print_x},
+		{"X", print_X},
+		{"R", print_rot13},
 		{NULL, NULL}
 	};
 	while (arr[i].correct)
